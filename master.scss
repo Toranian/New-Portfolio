@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Titillium+Web&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* transition-duration: 0.7s; */
+}
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+/* Set the color and text variables for the project */
+:root {
+    --main-bg-color: #303030;
+    --main-secondary-bg-color: #4C4A48;
+    --main-accent-color: #e74c3c;
+    /* --main-accent-color: #2ecc71; */
+    /* --main-accent-color: #1abc9c; */
+    --main-nav-bar-width: 240px;
+    /* --main-primary-font: 'Montserrat', sans-serif; */
+    --main-primary-font: 'Montserrat', sans-serif;
+    --main-text-color: #fff;
+}
+
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 0.6rem;
+    text-transform: uppercase;
+}
+
+
+body {
+    background-color: #212121;
+    color: #fff;
+}
+
+
+
+/* Side Bar / Navigation bar */
+
+#user-image {
+    background-image: url("img/img.jpg");
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1000px;
+    display: block;
+    /* align-self: center; */
+    /* margin: auto; */
+    margin: 1vh auto;
+    /* padding: 10px; */
+}
+
+#info {
+    
+    text-align: center;
+    padding: 40px 0;
+    font-weight: 300;
+    /* color: var(--main-text-color); */
+    /* color: purple; */
+}
+
+nav {
+    height: 100vh;
+    width: var(--main-nav-bar-width);
+    position: fixed;
+
+    font-family: var(--main-primary-font);
+    background-color: var(--main-bg-color);
+
+    border-right: 5px solid var(--main-accent-color);
+
+
+    grid-column: 1;
+    transition-duration: 0.8s;
+
+}
+
+nav ul {
+    list-style-type: none;
+
+}
+
+/* nav ul li a {
+    text-decoration: none;
+    color: var(--main-text-color);
+} */
+
+.nav-link {
+
+    text-decoration: none;
+    color: var(--main-text-color);
+
+    margin: 0;
+    text-align: center;
+    padding: 20px 10px;
+    display: block;
+    transition-duration: 0.15s;
+    background: none;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+
+    margin: 0;
+    padding: 20px 0;
+
+    left: 0;
+    height: 100%;
+    width: 0%;
+
+    background: var(--main-secondary-bg-color);
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+    transform: translateY(-50px);
+
+}
+
+.nav-link:hover::before {
+    right: 0;
+    width: 100%;
+    color: var(--main-secondary-bg-color);
+}
+
+#theme-toggle {
+    color: var(--main-text-color);
+}
+
+.content {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    flex-direction: column;
+
+    margin: 0 auto;
+    max-width: 50vw;
+    font-size: 18px;
+    line-height: 1.75em;
+
+    color: var(--main-text-color);
+
+
+}
+
+.content h1 {
+    text-align: center;
+}
+
+#main {
+    font-family: var(--main-primary-font);
+    margin-left: var(--main-nav-bar-width);
+}
+
+#main>div {
+    /* grid-column-start: 2; */
+    height: 100vh;
+    background-color: var(--main-bg-color);
+}
+
+#main>div:nth-child(even) {
+    background-color: var(--main-secondary-bg-color);
+}
+
+#home {
+    /* background-image: url("img/isaacmorrow.jpg");
+    height: 100vh;
+    width: 100%;
+    /* margin-left: var(--main-nav-bar-width); */
+
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 100%;
+
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    /* position: relative; */
+}
+
+#title h1 {
+    font-size: 3em;
+}
+
